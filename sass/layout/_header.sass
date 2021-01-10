@@ -1,0 +1,40 @@
+.container
+    margin: 0 auto
+
+.header
+    height: 95vh
+    background-image: linear-gradient(to right top, #7cc071c0, #168042a2), url(../img/hero.jpg)
+    background-size: cover
+    background-position: top
+    background-repeat: no-repeat
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%)
+    &__nav
+        display: flex
+        height: 10%
+        padding: 1rem
+        &--logo
+            max-width: 8%
+            @include respond(tablet-land)
+                max-width: 10%
+            @include respond(phone)
+                max-width: 20%
+            animation: easeIn 1s ease-in
+    &__text
+        height: 80%
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        text-align: center
+        color: $color-white
+        &--title
+            letter-spacing: .7rem
+            text-transform: uppercase
+            padding: 0 .2rem
+            font-size: 2.5rem
+            animation: fromLeft 1s ease-out
+        &--copy
+            letter-spacing: .3rem
+            margin-top: 2rem
+            font-size: 1.6rem
+            animation: fromRight 1s ease-out

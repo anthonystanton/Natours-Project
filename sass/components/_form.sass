@@ -1,0 +1,51 @@
+.form
+    width: 80%
+    margin: 0 auto
+    &__group
+        margin: 1rem auto
+    &__input
+        font-size: $default-font-size
+        padding: .5rem 1rem
+        border-radius: .2rem
+        background-color: rgba($color-white, .5)
+        border: none
+        color: inherit
+        font-family: inherit
+        border-bottom: 3px solid transparent
+        transition: all .3s
+        width: 80%
+        display: block
+        &::-webkit-input-placeholder
+            color: $color-grey-dark
+        &:focus
+            outline: none
+            box-shadow: 0 1rem 2rem rgba($color-black, .3)
+            border-bottom: 3px solid $medium-green
+            &:invalid
+                border-bottom: 3px solid $color-tours-box-one-2
+    &::-webkit-input-placeholder
+        color: $color-grey-dark
+
+    &__label
+        font-size: 1.2em
+        font-weight: 700
+        margin: .5rem 0 0 1rem
+        display: block
+        transition: all .3s
+
+    &__input:placeholder-shown + &__label
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-4rem)
+
+    &__radio-group
+        width: 49%
+        display: inline-block
+        @include respond(phone)
+            width: 75%
+
+    &__radio-label
+        font-size: $default-font-size
+        cursor: pointer
+        position: relative
+        padding-left: .5rem

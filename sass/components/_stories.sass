@@ -1,0 +1,56 @@
+.story
+    width: 85%
+    margin: 0 auto
+    box-shadow: 0 1rem 2rem rgba($color-black, .4)
+    background-color: rgba($color-white, .4)
+    padding: 2rem 2rem
+    font-size: $default-font-size
+    display: flex
+    transform: skewX(-6deg)
+    @include respond(phone)
+        flex-direction: column
+        width: 90%
+    & > *
+        transform: skewX(6deg)
+        margin: 0 1rem
+    &__shape
+        flex-basis: 25%
+        padding: 3rem 0
+        display: flex
+        height: 100%
+        align-items: center
+        justify-content: center
+        position: relative
+        @include respond(tablet-land)
+            flex-basis: 35%
+        @include respond(phone)
+            padding: 1rem 0
+
+        &--image
+            max-width: 100%
+            border-radius: 50%
+            transition: filter .2s
+            &:hover
+                filter: blur(.3rem) brightness(50%)
+            @include respond(phone)
+                max-width: 60%
+
+        &--caption
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, 0%)
+            opacity: 0
+            text-transform: uppercase
+            color: $color-white
+            font-size: $default-font-size
+            transition: all .2s
+        &:hover &--caption
+            opacity: 1
+            transform: translate(-50%, -50%)
+
+    &__text
+        flex: 1
+        padding: 2rem
+        @include respond(phone)
+            padding: 3rem 1rem

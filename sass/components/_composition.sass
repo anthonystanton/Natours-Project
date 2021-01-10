@@ -1,0 +1,13 @@
+.composition
+    text-align: center
+    &__photo
+        max-width: 40%
+        box-shadow: 0 .8rem 2rem $color-black-button
+        transition: all .2s
+        margin: 2rem 2rem -5rem
+        @include respond(phone)
+            margin: 1rem auto
+            max-width: 80%
+        &:hover
+            transform: scale(1.25)
+            box-shadow: 0 .4rem 1rem $color-black-button

@@ -1,0 +1,47 @@
+.footer
+    background-color: $color-grey-dark-2
+    font-size: 1.4rem
+    padding: 7rem 0
+    @include respond(tablet-land)
+        font-size: $default-font-size
+    @include respond(phone)
+        font-size: 1rem
+    &__logo
+        max-width: 15%
+    &__logo-box
+        text-align: center
+    &__left
+        flex-basis: 60%
+        @include respond(tablet-land)
+            flex-basis: 90%
+            margin: 0 auto
+    &__right
+        flex: 1
+        margin: 0 1rem
+        text-align: justify
+        @include respond(tablet-land)
+            margin: 8rem auto 0
+            flex: 0 1 70%
+    &__list
+        list-style: none
+        display: flex
+        justify-content: space-evenly
+    &__nav
+        border-top: 3px solid $color-grey-dark
+        padding: 1rem 0 0
+    &__copyright
+        padding: 1rem 1rem 0
+        border-top: 3px solid $color-grey-dark
+    &__link
+        &:link,
+        &:visited
+            color: $color-grey-light-1
+            text-transform: uppercase
+            text-decoration: none
+            transition: all .3s
+            display: block
+        &:hover,
+        &:active
+            color: $medium-green
+            box-shadow: 0 1rem 2rem rgba($color-black, .4)
+            transform: scale(1.1)

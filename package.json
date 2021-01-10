@@ -1,0 +1,14 @@
+{
+  "name": "wbpart",
+  "version": "1.0.0",
+  "description": "My second website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch sass/main.sass css/main.css"
+  },
+  "author": "Anthony",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

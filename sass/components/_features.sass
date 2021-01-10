@@ -1,0 +1,28 @@
+.features
+    &__box
+        background-color: rgba($color-white, .7)
+        text-align: center
+        padding: 2.5rem
+        font-size: 1.3rem
+        border-radius: .3rem
+        transition: transform .2s
+        box-shadow: 0 .5rem 1rem rgba($color-black, .7)
+        flex-basis: 25%
+        margin: 0 1rem
+        @include respond(tablet-land)
+            flex-basis: 47%
+            margin: 1rem auto
+        @include respond(phone)
+            flex-basis: 80%
+        &:hover
+            transform: scale(1.10) translateY(-2rem)
+        &--icon
+            background-image: linear-gradient(to right, $light-green, $dark-green)
+            -webkit-background-clip: text
+            color: transparent
+            font-size: 4rem
+            
+        
+
+                
+            

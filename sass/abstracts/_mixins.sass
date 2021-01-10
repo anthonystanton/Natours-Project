@@ -1,0 +1,17 @@
+/////// MEDIA QUERY MIXINS ///////////
+
+@mixin respond($breakpoint)
+    @if $breakpoint == tablet-port
+        @media (max-width: 75em) //1200px
+            @content 
+    @if $breakpoint == tablet-land
+        @media (max-width: 56.25em) //900px
+            @content
+    @if $breakpoint == phone
+        @media (max-width: 37.5em) //600px
+            @content
+
+// ANIMATION MIXIN FOR TOURS SECTION
+@mixin tours($tourAnimation, $delay)
+    animation: $tourAnimation 1.5s ease-out forwards
+    animation-delay: $delay

@@ -1,0 +1,121 @@
+.tours
+    &__box
+        flex-basis: 30%
+        margin: 2rem auto
+        @include respond(tablet-land)
+            flex-basis: 42%
+        @include respond(phone)
+            flex-basis: 80%
+            margin: 2rem auto
+
+.card
+    perspective: 100rem
+    position: relative
+    height: 40rem
+    opacity: 0
+    &--1
+        @include tours(opacityAnimation, 0s)
+        @include respond(phone)
+            @include tours(toursFromLeft, 0s)
+    &--2
+        @include tours(opacityAnimation, 2s)
+        @include respond(phone)
+            @include tours(toursFromRight, 2s)
+    &--3
+        @include tours(opacityAnimation, 4s)
+        @include respond(phone)
+            @include tours(toursFromLeft, 4s)
+    &__side
+        height: 40rem
+        perspective: 100rem
+        box-shadow: 0 .5rem .8rem rgba($color-black, 0.6)
+        border-radius: .5rem
+        position: absolute
+        transition: all .8s ease
+        top: 0
+        left: 0
+        width: 100%
+        overflow: hidden
+        backface-visibility: hidden
+        -webkit-backface-visibility: hidden
+        &--front
+            background-color: $color-white
+        &--back
+            transform: rotateY(180deg)
+            &--1
+                background-image: linear-gradient(to right bottom, $color-tours-box-one-1, $color-tours-box-one-2)
+            &--2
+                background-image: linear-gradient(to right bottom, $color-tours-box-two-1, $color-tours-box-two-2)
+            &--3
+                background-image: linear-gradient(to right bottom, $light-green, $medium-green)
+
+    &:hover &__side--front
+        transform: rotateY(-180deg)
+
+    &:hover &__side--back
+        transform: rotateY(0) scale(1.10)
+
+
+    &__picture
+        background-size: cover
+        background-position: center
+        background-blend-mode: screen
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%)
+        height: 15rem
+        &--1
+            background-image: linear-gradient(to right bottom, $color-tours-box-one-1, $color-tours-box-one-2), url(../img/nat-5.jpg)
+        &--2
+            background-image: linear-gradient(to right bottom, $color-tours-box-two-1, $color-tours-box-two-2), url(../img/nat-6.jpg)
+        &--3
+            background-image: linear-gradient(to right bottom, $light-green, $medium-green), url(../img/nat-7.jpg)
+
+    &__heading
+        font-size: 2.8rem
+        text-transform: uppercase
+        font-weight: 300
+        position: absolute
+        color: $color-white
+        text-align: right
+        top: 6rem
+        right: 1rem
+        width: 70%
+    &__heading-span
+        padding: .5rem 1rem
+        box-decoration-break: clone
+        -webkit-box-decoration-break: clone
+        &--1
+            background-image: linear-gradient(to right bottom, rgba($color-tours-box-one-1, .4), rgba($color-tours-box-one-2, .8))
+        &--2
+            background-image: linear-gradient(to right bottom, rgba($color-tours-box-two-1, .4), rgba($color-tours-box-two-2, .8))
+        &--3
+            background-image: linear-gradient(to right bottom, rgba($light-green, .4), rgba($medium-green, .4))
+
+    &__details
+        margin: 2rem auto
+        text-align: center
+        ul
+            list-style: none
+            width: 80%
+            margin: 0 auto
+            li
+                padding: 1rem 0
+                font-size: 1.3rem
+                font-weight: 600
+                &:not(:last-child)
+                    border-bottom: 2px solid $color-grey-light-2
+
+    &__cta
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        text-align: center
+    &__price-box
+        color: $color-white
+        margin-bottom: 4rem
+    &__price-only
+        font-size: 1.4rem
+    &__price-value
+        font-size: 3rem

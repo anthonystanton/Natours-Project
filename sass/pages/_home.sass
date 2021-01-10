@@ -1,0 +1,62 @@
+.section-about
+    background-color: $color-grey-light-1
+    padding: 15rem 0 20rem
+    margin-top: -20vh
+    @include respond(phone)
+        padding: 15rem 0
+
+.about__container
+    flex-wrap: wrap
+    &--text
+        flex-basis: 90%
+        margin: 0 auto
+        @include respond(phone)
+            flex-basis: 50%
+    &--picture
+        flex-basis: 90%
+        margin: 0 auto -2rem
+        @include respond(phone)
+            flex-basis: 50%
+    
+.section-features
+    background-image: linear-gradient(to right top, #7cc071c0, #168042a2), url(../img/nat-4.jpg)
+    transform: skewY(-7deg)
+    margin-top: -14vh
+    background-position: center
+    background-repeat: no-repeat
+    background-cover: cover
+    padding: 20rem 0
+    @include respond(phone)
+        padding: 2rem 0
+    & > *
+        transform: skewY(7deg)
+
+.section-tours
+    background-color: $color-grey-light-1
+    padding: 15rem 0
+    margin-top: -10vh
+
+.section-stories
+    padding: 10rem 0
+    position: relative
+
+.section-booking
+    background-image: linear-gradient(to right bottom, $medium-green, $dark-green)
+    padding: 8rem 0
+    margin-top: -10vh
+    display: flex
+    align-items: center
+
+.booking
+    width: 90%
+    margin: 0 auto
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    background-image: linear-gradient(105deg, rgba($color-white, .7) 0%, rgba($color-white, .7) 50%, transparent 50%), url(../img/nat-10.jpg)
+    @include respond(phone)
+        background-image: linear-gradient(105deg, rgba($color-white, .7) 0%, rgba($color-white, .7) 65%, transparent 65%), url(../img/nat-10.jpg)
+    &__form
+        width: 50%
+        @include respond(phone)
+            width: 80%
