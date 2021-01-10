@@ -1,4 +1,4 @@
-# Natours project
+# Natours Project
 
 # [https://anthonystanton.github.io/Natours-Project/](https://anthonystanton.github.io/Natours-Project/)
 
