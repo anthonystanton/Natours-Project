@@ -1,6 +1,6 @@
 # Natours project
 
-# [https://anthonystanton.github.io/Natours2/](https://anthonystanton.github.io/Natours2/)
+# [https://anthonystanton.github.io/Natours-Project/](https://anthonystanton.github.io/Natours-Project/)
 
 **Desktop first, single-page website**
 
